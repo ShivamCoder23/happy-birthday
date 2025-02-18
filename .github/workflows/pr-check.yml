@@ -11,6 +11,6 @@ jobs:
         uses: actions/checkout@v4
       
       - name: Run PR Review Bot
-        uses: sudhanshutech/PRGuard@v1.2.0
+        uses: sudhanshutech/PRGuard@v1.3.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
