@@ -1,0 +1,13 @@
+name: PR Check
+on:
+ pull_request:
+    types: [opened, synchronize, edited]
+
+jobs:
+  pr-guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: PRGuard
+        uses: sudhanshutech/PRGuard@v1.1.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
