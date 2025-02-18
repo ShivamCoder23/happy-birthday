@@ -7,7 +7,16 @@ jobs:
   pr-guard:
     runs-on: ubuntu-latest
     steps:
-      - name: PRGuard
-        uses: sudhanshutech/PRGuard@v1.2.0
-        with:
+       - name: Set up Node.js
+         uses: actions/setup-node@v2
+         with:
+          node-version: '20'
+
+      # Step 3: Install dependencies (e.g., @octokit/rest)
+       - name: Install dependencies
+         run: npm install
+
+       - name: PRGuard
+         uses: sudhanshutech/PRGuard@v1.2.0
+         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
