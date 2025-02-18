@@ -28,5 +28,9 @@
     "url": "https://github.com/faahim/happy-birthday/issues"
   },
   "homepage": "https://github.com/faahim/happy-birthday#readme",
-  "dependencies": {}
+  "dependencies": {
+    "@octokit/rest": "^21.1.1",
+    "dotenv": "^16.4.7",
+    "fs": "^0.0.1-security"
+  }
 }
