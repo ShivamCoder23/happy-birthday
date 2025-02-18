@@ -6,11 +6,24 @@ on:
 jobs:
   review:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
-      
+        uses: actions/checkout@v2
+
+      # Install Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      # Install dependencies in the action repository
+      - name: Install action dependencies
+        run: |
+          npm install
+
+      # Run the PR Review Bot
       - name: Run PR Review Bot
-        uses: sudhanshutech/PRGuard@v1.3.0
+        uses: sudhanshutech/PRGuard@v1.2.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
