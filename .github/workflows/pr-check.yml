@@ -24,6 +24,6 @@ jobs:
 
       # Run the PR Review Bot
       - name: Run PR Review Bot
-        uses: sudhanshutech/PRGuard@v1.2.0
+        uses: sudhanshutech/PRGuard@v1.3.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
