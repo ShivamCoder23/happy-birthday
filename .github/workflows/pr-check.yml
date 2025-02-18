@@ -8,6 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: PRGuard
-        uses: sudhanshutech/PRGuard@v1.1.0
+        uses: sudhanshutech/PRGuard@v1.3.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
